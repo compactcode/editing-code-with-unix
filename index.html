@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
 
-    <title>Editing Code - The UNIX Way</title>
+    <title>Your Editor Sucks</title>
 
     <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
     <meta name="author" content="Hakim El Hattab">
@@ -37,121 +37,22 @@
       <!-- Any section element inside of this container is displayed as a slide -->
       <div class="slides">
         <section>
-          <h1>Editing Code</h1>
-          <h3>The UNIX way</h3>
+          <h1>Your Editor Sucks</h1>
         </section>
         <section>
-          <h2>The UNIX Philosophy</h2>
-          <ul>
-            <li>Write programs that do one thing and do it well</li>
-            <li>Write programs to work together</li>
-            <li>Write programs to handle text streams, because that is a universal interface</li>
-          </ul>
+          <h2>It's dumber than you</h2>
+          <p>It can't even sort numbers properly</p>
         </section>
         <section>
-          <section>
-            <h2>examples/list.txt</h2>
-            <pre>
-              <code>
-2
-20
-4
-3
-11
-1
-              </code>
-            </pre>
-            <p>Sort it in numeric order.</p>
-          </section>
+          <h2>It's antisocial</h2>
+          <p>It only talks to its own plugins in its own language</p>
         </section>
         <section>
-          <h2>Unix V6, 1975</h2>
-          <pre>
-            <code>
-              cat examples/list.txt | sort -no examples/list.txt
-            </code>
-          </pre>
+          <h2>It's not marriage material</h2>
+          <p>It is unlikely to be your last editor</p>
         </section>
         <section>
-          <h2>Vi, 1976</h2>
-          <pre>
-            <code>
-              :sort n
-            </code>
-          </pre>
-          <p>or</p>
-          <pre>
-            <code>
-              :%! sort -n
-            </code>
-          </pre>
-        </section>
-        <section>
-          <h2>After almost 40 years of innovation...</h2>
-          <p>These things are going to sort themselves right?</p>
-        </section>
-        <section>
-          <h2>Sublime Text, 2008</h2>
-          <pre>
-            <code>
-import sublime
-import sublime_plugin
-import subprocess
-
-class SortNumericallyCommand(sublime_plugin.TextCommand):
-  def run(self, edit):
-    regions = self.view.sel()
-    if len(regions) == 1 and regions[0].empty():
-      regions = [sublime.Region(0, self.view.size())]
-      for region in regions:
-        p = subprocess.Popen(['sort', '-n'], bufsize=-1,
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE,
-            stdin=subprocess.PIPE)
-        ...
-            </code>
-          </pre>
-          <p>https://github.com/alimony/sublime-sort-numerically</p>
-        </section>
-        <section>
-          <h2>RubyMine, 2009</h2>
-          <br />
-          <blockquote>
-            RubyMine doesn't have such a feature.
-          </blockquote>
-          <br />
-          <p>http://devnet.jetbrains.com/message/5264187</p>
-        </section>
-        <section>
-          <h2>What happened?</h2>
-          <p>This was a solved problem almost 40 years ago.</p>
-        </section>
-        <section>
-          <h2>Write programs to work together</h2>
-          <p>We stopped doing this.</p>
-        </section>
-        <section>
-          <section>
-            <h2>Start embracing the philosophy</h2>
-            <p>Configure your editor so you can stream selections of text through a unix command.</p>
-          </section>
-          <section>
-            <h2>Sublime Text</h2>
-            <p>https://github.com/technocoreai/SublimeExternalCommand</p>
-          </section>
-          <section>
-            <h2>VIM, EMACS</h2>
-            <p>Its built in.</p>
-          </section>
-        </section>
-        <section>
-          <h2>Start banging out code like its 1975</h2>
-          <ul>
-            <li>sort</li>
-            <li>uniq</li>
-            <li>column -t</li>
-            <li>xmllint --format -</li>
-          </ul>
+          <h2>It's holding you back</h2>
         </section>
       </div>
     </div>
